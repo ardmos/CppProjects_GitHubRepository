@@ -40,7 +40,7 @@ void one_day_pass(Animal *animal)
 void show_stat(Animal *animal)
 {
     std::cout << animal->name << "의 상태" << std::endl;
-    std::cout << "체력	    : " << animal->heatlh << std::endl;
+    std::cout << "체력	    : " << animal->health << std::endl;
     std::cout << "배부름    : " << animal->food << std::endl;
     std::cout << "청결      : " << animal->clean << std::endl;
 }
@@ -61,7 +61,7 @@ int main()
 
         switch (input)
         {
-            int playwith
+            int playwith;
 
             case 1:
                 list[animal_num] = new Animal;
@@ -81,11 +81,11 @@ int main()
                 std::cout << "누구껄 보게?";
                 std::cin >> playwith;
 
-                if(playwith < animal_num) shwo_stat(list[animal_num]);
+                if(playwith < animal_num) show_stat(list[animal_num]);
                 break;
         }
 
         for (int i = 0; i != animal_num; i++) one_day_pass(list[i]);                
     }
-    for(int i = 0; int != animal_num; i++) delete list[i];
+    for(int i = 0; i != animal_num; i++) delete list[i];
 }
