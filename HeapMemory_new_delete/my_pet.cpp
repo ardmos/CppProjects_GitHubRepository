@@ -11,10 +11,10 @@ typedef struct Animal
 
 void create_animal(Animal *animal)
 {
-    std::cout << "동물의 이름?";
+    std::cout << "동물의 이름? ";
     std::cin >> animal->name;
 
-    std::cout << "동물의 나이?";
+    std::cout << "동물의 나이? ";
     std::cin >> animal->age;
 
     animal->health = 100;
@@ -48,7 +48,7 @@ void show_stat(Animal *animal)
 int main()
 {
     Animal *list[10];
-    int animal_num = 10;
+    int animal_num = 0;
 
     for (;;)
     {
@@ -81,7 +81,7 @@ int main()
                 std::cout << "누구껄 보게?";
                 std::cin >> playwith;
 
-                if(playwith < animal_num) show_stat(list[animal_num]);
+                if(playwith < animal_num) show_stat(list[playwith]);
                 break;
         }
 
