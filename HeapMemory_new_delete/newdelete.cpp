@@ -2,12 +2,12 @@
 
 /* 1. Heap 메모리에 변수 할당하기
 int main(){
-    int* p = new int;
-    *p = 10;
+    int* pointer = new int;
+    *pointer = 10;
 
-    std::cout << *p << std::endl;
+    std::cout << *pointer << std::endl;
 
-    delete p;
+    delete pointer;
     return 0;
 }
 */
@@ -27,6 +27,6 @@ int main(){
         std::cout << i << "th element of list : " << list[i] << std::endl;
     }
     delete[] list;
-    return 0;    
+    return 0;        
 }
 
